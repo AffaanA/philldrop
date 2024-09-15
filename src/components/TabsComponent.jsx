@@ -22,8 +22,19 @@ const TabsComponent = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-
-        ml: 2,
+        pl: 2,
+        position: "relative", // Make the Box a reference for the ::after pseudo-element
+        "&::after": {
+          content: '""',
+          display: "block",
+          width: "70%", // 70% of the total width of the Box
+          height: "2px", // Height of the border line
+          backgroundColor: "#f2f3f5", // Color of the line
+          position: "absolute", // Absolute positioning relative to the Box
+          bottom: 0, // Position the line at the bottom of the Box
+          left: "0", // Center the line horizontally within the Box
+          zIndex: "-1",
+        },
       }}
     >
       <Tabs
@@ -32,7 +43,7 @@ const TabsComponent = () => {
         aria-label="tabs"
         sx={{
           "& .MuiTabs-flexContainer": {
-            gap: 3,
+            gap: 1,
           },
           "& .MuiTab-root": {
             textTransform: "none",
@@ -41,6 +52,7 @@ const TabsComponent = () => {
             minWidth: "auto",
             fontSize: "14.4px",
             lineHeight: "22.62px",
+            padding: 0,
           },
           "& .Mui-selected": {
             borderBottom: "2px solid black",
@@ -60,20 +72,19 @@ const TabsComponent = () => {
                 }}
               >
                 {tab.label}
-                <Badge
-                  badgeContent={tab.num}
+                <Box
                   sx={{
-                    ml: 3,
-                    "& .MuiBadge-badge": {
-                      backgroundColor: tab.color,
-                      color: "#fff",
-                      borderRadius: "20%",
-                      padding: "4px 4px",
-                      fontSize: "12px",
-                      fontWeight: "bold",
-                    },
+                    ml: 1,
+                    backgroundColor: tab.color,
+                    color: "#fff",
+                    borderRadius: "20%",
+                    padding: "0 3px",
+                    fontSize: "11px",
+                    fontWeight: "bold",
                   }}
-                />
+                >
+                  {tab.num}
+                </Box>
               </Box>
             }
           />

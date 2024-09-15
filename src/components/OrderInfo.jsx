@@ -12,7 +12,7 @@ const OrderInfo = () => {
       height="100%"
     >
       {/* Order ID Section */}
-      <Box display="flex" alignItems="center" gap={5} mb={-1}>
+      <Box display="flex" alignItems="center" gap={5}>
         <Typography
           variant="h6"
           fontWeight="700"
@@ -50,7 +50,7 @@ const OrderInfo = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: 0.1,
+          gap: 0.3,
           maxWidth: "500px",
         }}
       >

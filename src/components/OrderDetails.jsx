@@ -4,6 +4,7 @@ import OrderInfo from "./OrderInfo";
 import StatusInfo from "./StatusInfo";
 import DeliveryNotes from "./DeliveryNotes";
 import ActionIcons from "./ActionIcons";
+import "../../src/App.css";
 
 const OrderDetails = () => {
   return (
@@ -17,7 +18,6 @@ const OrderDetails = () => {
       height="142px"
       backgroundColor="#fff"
       borderRadius="10px"
-      boxShadow="2"
     >
       <OrderInfo />
       <StatusInfo />

@@ -146,7 +146,7 @@ const Sidebar = () => {
           pt: "9px",
           pl: "9px",
           width: 262,
-          height: "51.92px",
+          height: "60px",
         }}
       >
         <img
@@ -160,7 +160,17 @@ const Sidebar = () => {
           display: "flex",
           flexDirection: "column",
           height: "calc(100% - 44px)",
-          overflow: "auto",
+          overflowY: "overlay", // 1. Use overlay to prevent scrollbar from taking width
+          "&::-webkit-scrollbar": {
+            width: "5px", // 2. Set scrollbar width
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#888", // 3. Scrollbar thumb color
+            borderRadius: "4px", // 4. Rounded scrollbar corners
+          },
+          "&::-webkit-scrollbar-thumb:hover": {
+            backgroundColor: "#555", // 5. Change color on hover
+          },
         }}
       >
         <List>

@@ -23,7 +23,7 @@ const ActionIcons = () => {
       flexDirection="column"
       flexWrap="wrap"
       columnGap={2}
-      rowGap={0.3}
+      rowGap={0.37}
       alignItems="flex-start"
     >
       {actions.map((action, index) => (

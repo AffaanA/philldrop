@@ -43,7 +43,14 @@ const Navbar = () => {
         <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
           {formattedDate}
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 2,
+            cursor: "pointer",
+          }}
+        >
           {menuItems.map((menuItem, index) => (
             <img
               key={index}
@@ -52,7 +59,9 @@ const Navbar = () => {
               style={{ height: 24 }}
             />
           ))}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
             <Avatar
               src="/icons/Profile.png"
               alt="Profile Image"

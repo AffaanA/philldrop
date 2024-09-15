@@ -8,7 +8,7 @@ const StatusInfo = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "1px",
+          gap: "3px",
         }}
       >
         <Typography
@@ -41,7 +41,7 @@ const StatusInfo = () => {
         >
           Delivery Time: <span style={{ color: "#6b6b6b" }}>Anytime</span>
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "1px" }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
           <Typography
             variant="body2"
             sx={{ fontSize: "11px", fontWeight: 600, color: "#000" }}
@@ -53,7 +53,10 @@ const StatusInfo = () => {
             size="small"
             sx={{
               fontSize: "11px",
-              height: "25px",
+              height: "20px",
+              width: "auto",
+              padding: 0.5,
+              textTransform: "none",
             }}
           >
             Create Ticket
